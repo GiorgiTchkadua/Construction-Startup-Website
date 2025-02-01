@@ -1,0 +1,782 @@
+:root{
+    --main-color: rgb(238, 166, 31);
+}
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track { 
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {/* #888*/
+    background: #ffa601;
+}
+::-webkit-scrollbar-thumb:hover {/* #555*/
+    background: #ff7301;
+}
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.about, .services, .project, .teams, .feedback, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content,
+.services .serv-content,
+.project .project-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(238, 166, 31); /* crimson, esaa is ragaceebi rom weria who i am with da ragaceebze */
+    padding: 0 5px;
+    background: #fff; /* #fff*/
+    transform: translateX(-50%);
+}
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: rgb(238, 166, 31); /* crimson, esaa ris rom chamocdebii da rom ecvleba menus background feri*/
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: rgb(238, 166, 31); /* crismon, aq logos hands sheecvala feri, mtavraze*/
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{  /* #fff  es ucvlis rom chamoiweva mere hands fers*/
+    color: #011a42;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff; /* #fff*/
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: rgb(238, 166, 31); /* #fff es ki maqmade rogor shecvlaos xelis dadebisas menu*/
+}
+.navbar.sticky .menu li a:hover{
+    color: #011a42; /* esaa xels rom miadeb ra ferad sheicvlaos menus sityvebi, cvhamowevis mere  */
+}
+/* menu btn styling */
+.menu-btn{
+    color: rgb(243, 85, 12); /* #fff esaa romapataraveb raa websites da menubar romaa magis feri*/
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: rgb(238, 166, 31); /* crimson */ 
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+/* home section styling */
+.home{
+    display: flex;
+    background: url("images/mainpage\ foto.jpg") no-repeat center; /* images/banner.jpg */
+    height: 100vh;
+    color: #fff; /* #fff essaa sul mavarze rom kargad wers magis feri teqstis*/
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .max-width .row{
+  margin-right: 0;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: rgb(238, 166, 31); /* crimson */
+    font-weight: 500;
+}
+.home .home-content a{
+    display: inline-block;
+    background: rgb(238, 166, 31);/* crimson */
+    color: #fff;/* #fff */
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid rgb(238, 166, 31);
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: rgb(238, 166, 31); /* crimson */
+    background: none;
+    font-weight:lighter
+}
+
+/*project section syiling */
+
+
+
+.photo-gallery {
+    padding: 20px;
+    text-align: left;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    
+}
+.search-bar{
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.search-bar i{
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.search-bar input {
+    width: 100%;
+    padding: 0px;
+    font-size: 16px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-weight: lighter;
+}
+.filter-bar{
+    width: 48%;
+    
+}
+.filter-bar select {
+    width: 100%;
+    padding: 0px;
+    font-size: 16px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    
+}
+
+
+.photo-item {
+    width: 21%; /* Adjust the width to fit 4 items in one row */
+    
+    padding: 0px;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 220px;
+    border-radius: 14px;
+    transition: transform 0.5s;
+}
+.photo-item:hover img{
+    transform: scale(1.1);
+}
+
+.photo-item h3 {
+    margin: 30px 30px 30px 0px;
+}
+
+.photo-item p {
+    margin: 35px 10px -10px 0px;
+    font-size: 17px;
+    font-weight: lighter;
+    color: #5f615f;
+}
+.photo-item h2 {
+    margin: 35px 20px 30px 0px;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #5f615f;
+}
+.photo-link img {
+    cursor: pointer;
+}
+
+
+/* esaa pagebar 1,2,3,4 da next page romaa magisi */
+.photo-gallery {
+    position: relative;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar i {
+    margin-right: 10px;
+}
+
+.filter-bar {
+    margin-left: auto;
+}
+
+.photo-rows {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-page {
+    display: flex;
+    flex-direction: column;
+}
+.photo-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Adjust this value to reduce the distance between rows */
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+.photo-item {
+    width: 22%; /* Adjust the width to fit 4 items in one row */
+    
+    padding: 0px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 220px;
+    border-radius: 14px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 230px;
+}
+
+.pagination a, .pagination span {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}
+
+.next-page {
+    margin-left: 30px;
+}
+
+/* ეს იგივე პაგების 1,2,3,4 ისაა მაგრამ ნაწილია იმისი რომ მეორეზე რომ გადავა ზევიტ აისქროლოს */
+.photo-page {
+    display: none;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.photo-page.visible {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.photo-page.slide-up {
+    transform: translateY(-20px);
+}
+
+
+
+/* esaa imis css rom gamqralia, da nel nela rom chndeba */
+.photo-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.photo-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* dasasruli */
+
+
+
+
+
+/* this is lines vertical and horizontal lines styiling */
+body {
+    
+    position: relative;
+}
+.vertical-line {
+    position: absolute;
+    width: 1px;
+    background-color: #FFA07A; /* Light carrot color */
+    opacity: 0.5; /* Lower visibility */
+    z-index: 1; /* Lower z-index so that images appear above */
+}
+
+/* Position the vertical lines at 25% and 75% of the page width */
+.vertical-line.left {
+    left: 25.5%;
+    top: 0;
+    bottom: 0;
+}
+
+.vertical-line.right {
+    right: 25.5%;
+    top: 0;
+    bottom: 0;
+}
+
+/* Clip out the vertical line between 28.3% to 31% */
+.vertical-line.left {
+    clip-path: polygon(0 28.65%, 100% 28.65%, 100% 100%, 0 100%);
+}
+
+.vertical-line.right {
+    clip-path: polygon(0 28.65%, 100% 28.65%, 100% 100%, 0 100%);
+}
+
+
+
+.vertical-line.first{
+    top: 63.75%;
+    left: 50%;
+    height: 2.75%;
+} 
+.vertical-line.second{
+    top: 25.95%;
+    left: 50%;
+    height: 2.7%;
+} 
+/* Horizontal lines */
+.horizontal-line {
+    position: absolute;
+    height: 1px;
+    background-color: #FFA07A; /* Light carrot color */
+    left: 25.5%;
+    right: 25.5%;
+    opacity: 0.5; /* Lower visibility */
+    z-index: 1; /* Lower z-index so that images appear above */
+}
+
+
+/* Position the horizontal lines with equal spacing */
+.horizontal-line.line1 {
+    top: 28.65%;
+    left: 0%;
+    right: 0%;
+}
+
+.horizontal-line.line2 {
+    top: 45%;
+}
+
+.horizontal-line.line3 {
+    top: 63.75%;
+}
+
+.horizontal-line.line4 {
+    top: 66.5%;
+}
+
+/* Ensure images have a higher z-index */
+img {
+    z-index: 2;
+    position: relative; /* Ensure position is set for z-index to work */
+}
+
+
+/* contact section styiling */
+.contact .title::after{
+    content: "მოგვწერე";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: var(--main-color); /* crimson */
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus{
+    border-color: #b3b3b3;
+}
+.contact .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button-area{
+  display: flex;
+  align-items: center;
+}
+.right form .button-area button{
+  color: #fff;
+  display: block;
+  width: 160px!important;
+  height: 45px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: var(--main-color); /* crimson */
+  border: 2px solid var(--main-color); /* crimson */
+  transition: all 0.3s ease;
+}
+.right form .button-area button:hover{
+  color: var(--main-color); /* crimson */
+  background: none;
+}
+/* footer section styling */
+/* Footer Styles */
+/* Footer Styles */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+footer {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 40px 0;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer-content {
+    align-items: center; /* Added to align items vertically */
+}
+
+.legal-info p {
+    margin-bottom: 10px; /* Adjusted margin */
+}
+
+.company-info {
+    flex: 1;
+    min-width: 250px;
+    padding-left: 0; /* Remove padding to move closer to the edge */
+}
+
+.company-info h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+    padding-top: 5px;
+}
+.company-info h2 span {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #111;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 5px;
+}
+.company-info p{
+    font-size: 14px;
+    font-weight: lighter;
+   
+}
+
+.footer-links ul {
+    list-style: none;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.footer-links ul li {
+    margin: 0 15px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-weight: bolder;
+}
+
+.footer-links ul li a:hover {
+    color: #111;
+}
+
+.social-media {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px 0;
+    text-align: center;
+    padding-left: 40px;
+    padding-bottom: 60px;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #111;
+}
+
+.legal-info {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px 0;
+    width: 50%; /* Adjust the width as needed */
+    margin-left: 25%; /* Center it between 25% and 75% */
+    margin-right: 25%;
+}
+
+.legal-info p {
+    font-size: 13px;
+    font-weight: lighter;
+    white-space: nowrap; /* Prevent wrapping */
+    text-overflow: ellipsis; /* Show ellipsis for overflow */
+    padding-bottom: 10px;
+}
+
+.legal-info a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+    font-weight: bolder;
+}
+
+.legal-info a:hover {
+    color: #111;
+}
+
+.additional-links {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px 0;
+    text-align: right;
+    padding-bottom: 30px;
+}
+
+.additional-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 10px;
+    transition: color 0.3s;
+    font-weight: lighter;
+}
+
+.additional-links a:hover {
+    color: #111;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .company-info, .legal-info, .social-media, .additional-links {
+        text-align: center;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links ul li {
+        margin: 10px 0;
+    }
+
+    .social-media a {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+}
+
+
