@@ -16,6 +16,6 @@ A modern website for TRUSTED HANDS, a construction and home renovation company p
 ## Technologies Used  
 - HTML, CSS, JavaScript (Front-end)  
 - Bootstrap / Tailwind CSS (Styling)  
-- React.js / Vue.js (If applicable)  
-- Node.js / PHP (Back-end, if applicable)  
+- React.js / Vue.js  
+- Node.js / PHP (Back-end)  
 
